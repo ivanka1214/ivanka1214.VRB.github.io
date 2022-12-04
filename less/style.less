@@ -1,0 +1,450 @@
+//font family   
+@font-face {
+    font-family: 'HelveticaNeueCyr_bold';
+    src: url('../font//HelveticaNeueCyr-Bold.eot');
+    src: url('../font/HelveticaNeueCyr-Bold.woff') format('woff'),
+        url('../font/HelveticaNeueCyr-Bold.woff2') format('woff2'),
+        url('../font/HelveticaNeueCyr-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyr_Thin';
+    src: url('../font/HelveticaNeueCyr-Thin.eot');
+    src: url('../font/HelveticaNeueCyr-Thin.ttf') format('truetype'),
+        url('../font/HelveticaNeueCyr-Thin.woff') format('woff'),
+        url('../font/HelveticaNeueCyr-Thin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.thin() {
+    font-family: 'HelveticaNeueCyr_Thin', sans-serif;
+}
+.bold() {
+    font-family: 'HelveticaNeueCyr_bold', sans-serif; 
+}
+
+// colors
+
+@icons-color:#94ca2d;
+@light:#fff;
+
+// basic setting
+html {
+
+    overflow-x:hidden; 
+    
+    }
+body{
+    margin: 0;
+ }
+//  Первая секция
+.main {
+    
+    &-overlay {
+        background-color: rgb(0, 0, 0);
+        left: 0;
+        top: 0;
+        height: 700px;
+        width:100%;
+        position: absolute;
+        opacity: 0.7;
+        z-index: -1;
+        
+      }
+
+
+height: 700px;
+background:url(../img/main/fon-bg.jpg) center no-repeat ;
+background-size:cover;
+position: relative;
+z-index:1;
+// Верхний заголовок
+&-header {
+        .header-over{
+        background-color: rgb(0, 0, 0);
+        left: 0;
+        top: 0;
+        width:100%;
+        height: 100%;
+        opacity: 0.4;
+        position: absolute;  
+        z-index: 1;  
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+    .thin();
+    color:@light;
+   .logo {
+  width: 10%;
+  img{
+    width: 100px;
+    height: auto;
+  }
+   z-index: 10;
+   
+   
+  
+  
+   
+   }
+    .name {
+         width: 35%;  
+         font-size: 20px; 
+         z-index: 10;
+    }
+    .phone { 
+        width: 12%;
+        font-size: 25px;
+        z-index: 10;
+        flex-wrap:wrap;
+        .thin();
+        color:@light;
+        
+      a {   z-index: 10;
+            font-size: 20px;
+            .bold();
+            color: @icons-color;
+    }
+}
+}
+// Основная секция
+&-section {
+    
+        &-header {
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        color:#fff;
+        font-size: 39px;
+        .bold();
+        padding-top: 100px;     
+    }
+   
+    // Кнопка Заказать очки
+    &-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 105%;
+        p {
+            margin-top: 30px;
+            font-size: 30px;
+            color:@light;
+            .bold();
+            z-index: 10;
+        }
+    &-rw{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 35%;
+        align-items: center;
+        z-index: 10;
+        padding-right: 0;
+        img {
+            z-index: 10;
+            width: 370px;
+            height: auto;
+        }
+          
+        button{
+            font-size: 18px;
+            width: 270px;  
+            height: 60px;
+            .bold();
+            &:hover {
+                cursor:pointer;
+                background-color:darken(@icons-color,5%);
+            }
+        z-index: 442;
+        width: 320px;
+        height: 60px;
+        background: @icons-color;
+        border-radius: 3px;
+        border:none;
+        color:@light;
+         font-size: 18px;
+        .bold();      
+        margin-bottom: 25px;
+    }
+    }
+    &-img {
+        position: relative;
+        top: 30px;
+        left: -120px;
+        width: 25%;
+        z-index: 10;
+     
+        
+        &-dino{
+            width: 480px;
+            height: auto;
+            
+        }
+      
+    }
+}
+} 
+}
+// Вторая секция
+.two {
+    background:#f8f8f0;
+    height: 650px;
+    width: 100%;
+&-flex {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+    &-device {
+        height: 50px;
+        width: 25%;
+        h2 {
+            .bold();
+        }
+        .thin();
+        font-weight: 600;
+    }
+    &-picture {
+      
+        .picture {
+            width: 500px;
+            height: auto;
+        }
+    }
+}
+}
+// Третья секция
+.free-flex {
+    display: flex;
+    flex-direction: column;
+    
+    
+    .pay{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 75%;
+       padding-top: 25px;
+
+    }
+    button {
+        width: 500px;
+        height: 65px;
+        background: @icons-color;
+        border-radius: 3px;
+        border:none;
+        color:@light;
+        font-size: 18px;
+        .bold();   
+        &:hover {
+             cursor:pointer;
+            background-color:darken(@icons-color,5%);
+            }
+        }   
+    &-eq {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 78%;
+      padding-top: 20px;
+      .thin();
+        font-weight: 600;
+        .com1 {
+            padding-top: 17px;
+        }
+        span {
+            color:rgb(255, 0, 0);
+        }
+        ul {
+                        list-style-type: '- ';
+                        padding-inline-start: 30px;
+                     }
+      &-1 {
+        align-self: flex-end;
+        
+      }
+       
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Адаптив.
+@media (max-width:767px){
+    .main {
+        height: 410px;
+        &-overlay {
+            height: 410px;
+            }
+        
+&-header {
+    
+    flex-wrap:wrap;
+    .logo {
+        img{
+            padding-top: 20px;
+            width: 55px;
+            height: auto;
+        }
+        width: 5%;
+       }
+        .name {
+            padding-left: 50px;
+            width: 80%;
+            font-size: 12px;     
+        }
+        .phone {
+            flex-wrap:nowrap;
+            width: 100%;
+            font-size: 17px;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-right: 0;
+            a {
+                font-size: 12px;
+            }
+         }    
+    }
+    // Основная секция
+    &-section {
+        
+            &-header {
+            width: 71%;
+            font-size: 16px;
+            .bold();
+            padding-top: 50px; 
+            padding-left: 20px;    
+        }
+       
+        // Кнопка Заказать очки
+        &-btn { 
+            p {
+                margin-top: 30px;
+                font-size: 17px;    
+            }
+        &-rw{
+            padding-left: 25px;
+            width: 70%;
+            img {
+                width: 145px;
+                height: auto;
+            } 
+            button{
+                font-size: 12px;
+                width: 170px;  
+                height: 37px;      
+        }
+        }
+        &-img {
+            position: relative;
+            top: 80px;
+            left: -70px;
+            width: 25%;
+            &-dino{
+                width: 145px;
+                height: auto;  
+            }
+        }
+    }
+    } 
+    }
+
+// Вторая секция
+.two {
+    height: 700px;
+    width: 100%;
+&-flex {
+    padding-top: 45px;
+  
+    flex-direction: column;
+    height: 200px;
+    &-device {
+        padding-left: 20px;
+        padding-top: 100px;
+        height: 50px;
+        width: 90%;
+        h2 {
+            font-size: 22px;     
+        }
+        font-size: 11px;
+    }
+    &-picture {
+      padding-top: 80px;
+      text-align: center;
+        .picture {
+            width: 257px;
+            height: auto;
+        }
+    }
+}
+}
+
+.free-flex {
+    
+    .pay{
+       padding-top: 20px;
+       width: 100%;
+      
+    }
+    button {
+        width: 280px;
+        height: 40px;
+        font-size: 12px;
+        
+        }   
+    &-eq {
+      
+      flex-direction: column;
+      justify-content: center;
+      width: 78%;
+      font-size: 17px;
+      padding-top: 110px;
+      padding-left: 20px;
+      .thin();
+        font-weight: 600;
+        ul {
+            font-size: 11px;
+        }
+        .com1 {
+            padding-top: 0px;
+        }
+       
+        
+      &-1 {
+        align-self: flex-start;
+        
+      }
+      
+      
+
+    }
+}
+
+
+  
+
+
+
+
+}
